@@ -3,11 +3,11 @@
 
 import openai
 
-openai.api_key = "YOUR_API_KEY"
+openai.api_key = ""
 
 def get_answer(input):
     response = openai.Completion.create(
-        engine="text-davinci-003",
+        engine="gpt-3.5-turbo",
         prompt=input,
         max_tokens=50
     )
@@ -15,4 +15,4 @@ def get_answer(input):
 
 # Test debug line(s) below
 
-get_answer("What is the weather like?")
+# get_answer("What is the weather like?")

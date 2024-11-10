@@ -11,4 +11,4 @@ def speak(response_text):
 
 
 # Testing lines for debugging below
-speak("Hello, how can I help you?")
+# speak("I am going to make america great again")
