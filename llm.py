@@ -3,16 +3,16 @@
 
 import openai
 
-openai.api_key = ""
 
-def get_answer(input):
-    response = openai.Completion.create(
-        engine="gpt-3.5-turbo",
-        prompt=input,
-        max_tokens=50
+openai.api_key = "here"
+
+def get_answer(question):
+    response = openai.ChatCompletion.create(
+        model="gpt-4o-mini",  # Use the chat model name
+        messages=[{"role": "user", "content": question}]
     )
-    return response.choices[0].text.strip()
+    answer = response['choices'][0]['message']['content']
+    return answer
 
-# Test debug line(s) below
-
-# get_answer("What is the weather like?")
+# Example usage
+print(get_answer("What is the weather like?"))
