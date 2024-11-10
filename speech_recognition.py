@@ -1,6 +1,5 @@
-
-
-# This is the speech recognition module
+# This is the speech recognition modules
+# !pip install SpeechRecognition! This installs the google speech recog module. 
 
 import speech_recognition as sr
 
